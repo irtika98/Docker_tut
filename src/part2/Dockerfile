@@ -1,8 +1,11 @@
 #os 
 FROM python:3.11-alpine 
 
+# this enables logs to be displayed in container terminal immediately
+ENV PYTHONUNBUFFERED=1
+
 # directory
-WORKDIR /app   
+WORKDIR /django 
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt

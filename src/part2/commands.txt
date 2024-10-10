@@ -1,2 +1,4 @@
-docker build --tag python-django . # builds django image
-docker run --publish 8000:8000 python-django # map the image to 8000 port of local machine and run it
+docker-compose run --rm app django-admin startproject core . # builds django image
+docker-compose up
+
+## you only need dockerfile and compose.yml to run different containers of this project
